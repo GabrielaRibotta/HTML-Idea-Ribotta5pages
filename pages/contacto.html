@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Tempest - Contacto</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../estilo.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="../multimedia/favicon-32x32.png">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="menuMobile">
+                <div class="bars">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <div class="menu">
+                    <ul>
+                            <li><a href="../index.html">Inicio</a></li>
+                            <li><a href="./nosotros.html">Nosotros</a></li>
+                            <li><a href="./historia.html">Historia</a></li>
+                            <li><a href="./galeria.html">Galería</a></li>
+                            <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+            <img class="logoMobile" src="../multimedia/logo.png" alt="logo">
+        </nav>
+            <div class="menuDesktop">
+                <div class="logo">
+                    <img src="../multimedia/logo.png" alt="logo">
+                    <nav>
+                    <div class="transparente"></div>
+                        <ul>
+                            <li><a href="../index.html">Inicio</a></li>
+                            <li><a href="./nosotros.html">Nosotros</a></li>
+                            <li><a href="./historia.html">Historia</a></li>
+                            <li><a href="./galeria.html">Galería</a></li>
+                            <li><a href="#">Contacto</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+    </header>
+    <main>
+        <section class="banner">
+            <h1>The Tempest</h1>
+            <h2>Balmoral Theater Group</h2>
+        </section>
+        <section>
+            <h2>Contacto</h2>
+            <p>Pueden contactarnos a través de este formulario:</p><br>
+            <div class="formulario">
+                <form action="enviar.php" method="post" enctype="application/x-www-form-urlencoded">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" name="nombre" id="nombre">
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" name="apellido" id="apellido">
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="email" id="email" placeholder="vos@tuemail.com">
+                    <div class="radio">
+                        <legend>¿Viste alguna de nuestras obras?</legend>
+                        <label for="Si">Si</label>
+                        <input type="radio" name="audiencia" id="si">
+                        <label for="No">No</label>
+                        <input type="radio" name="audiencia" id="no">
+                    </div>
+                    <div class="botones">
+                        <label for="experiencia">¿Tenés experiencia en teatro?</label>
+                        <select name="experiencia" id="experiencia">
+                            <option value="Mucha">Mucha</option>
+                            <option value="Un poco">Un poco</option>
+                            <option value="Nada">Nada</option>
+                        </select>
+                    </div>
+                    <label for="mensaje">¿Cómo nos conociste?</label>
+                    <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="¡Contanos!"></textarea>
+                    <div class="botones">
+                        <label for="noticias">¿Querés recibir noticias de nuestras próximas producciones?</label>
+                        <input type="checkbox" name="noticias" id="noticias">
+                    </div>
+                    <div class="botones">
+                        <input type="reset" value="Borrar" class="enviar">
+                        <input type="submit" value="Enviar" class="enviar">
+                    </div>
+                </form>
+            </div><br>
+            <p>¡Muchas Gracias!</p>
+        </section>
+    </main>
+    <footer>
+        <footer>
+            <p>© Gabriela Ribotta</p>
+            <div class="redes">
+                <a href="https://www.youtube.com/channel/UCHXBspbnlkdEstZVdx827Xg/"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://es-la.facebook.com/balmoralcollegeoficial"><i class="fa-brands fa-facebook-square"></i></a>
+                <a href="https://twitter.com/ColegioBalmoral"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.instagram.com/colegio.balmoral/"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </footer>
+</body>
+</html>

@@ -1,0 +1,542 @@
+@import url('https://fonts.googleapis.com/css2?family=Gulzar&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Gulzar', serif;
+    color: #ffffff;
+}
+
+
+    header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 3rem;
+        width: 100%;
+        background-color: #706c6c;
+        color: #ffffff;
+    }
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        padding: 10px;
+        font-size: 1.5rem;
+    }
+    .menuDesktop{
+        display: none;
+    }
+    .menuMobile{
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+    }
+    .bars{
+        position: relative;
+        height: 2rem;
+        width: 2rem;
+    }
+    .bars i{
+        position: absolute;
+        margin-top: 0.3rem;
+        margin-left: 0.3rem;
+    }
+    .bars:hover{
+        background-color: #ffffff;
+    }
+    .bars:hover i{
+        color: #3b3434;
+    }
+    .menuMobile:hover .menu{
+        display: block;
+    }
+    .menu{
+        display: none;
+        position: relative;
+        margin-top: 0;
+        width: 10rem;
+        opacity: 90%;
+        z-index: 1;
+        text-align: center;
+    }
+    .menu li{
+        background-color: #706c6c;
+        color: #ffffff;
+        list-style: none;
+        font-weight: bold;
+    }
+    .menu li:hover{
+        background-color: #ffffff;
+        transition: 1s;
+    }
+    nav a{
+        text-decoration: none;
+    }
+    .menu li:hover a{
+        color: #3b3434;
+    }
+    nav img{
+        max-height: 1.7rem;
+    }
+
+    body{
+        height: 100%;
+        background-color: #3b3434;
+    }
+    main{
+        color: #ffffff;
+        font-size: 1rem;
+        height: 100%;
+        width: 100%;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        padding-bottom: 2rem;
+    }
+    main img{
+        max-width: 75%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .banner{
+        background-image: url(./multimedia/telon.jpg);
+        background-size: cover;
+        height: 5rem;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr;
+        grid-template-areas: 
+        "subtitulo"
+        "titulo"
+        "titulo";
+        align-items: center;
+    }
+    .banner h2{
+        grid-area: subtitulo;
+    }
+    .banner h1{
+        grid-area: titulo;
+        letter-spacing: 2px;
+    }
+    h1, h2, h3{
+        text-align: center;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    h2{
+        font-size: 1rem;
+    }
+    h3{
+        font-size: 1rem;
+    }
+
+    article p{
+        text-align: justify;
+        line-height: 1.5rem;
+        padding: 2rem;
+    }
+
+    /* Nosotros */
+
+    .tarjeta{
+        background-color: #706c6c;
+        width: 80%;
+        margin: auto;
+        margin-bottom: 2rem;
+        padding: 1rem;
+    }
+    .tarjeta img{
+        margin-bottom: 0.4rem;
+    }
+    .tarjeta h3, .tarjeta p{
+        color: #ffffff;
+        text-align: center;
+        line-height: 1.5rem;
+    }
+    .tarjeta p{
+        display: none;
+    }
+    .tarjeta:hover{
+        background-color: #ffffff;
+        transition: 1s;
+    }
+    .tarjeta:hover h3, .tarjeta p{
+        color: #3b3434;
+    }
+    .tarjeta:hover p{
+        display: block;
+        transition: 1.2s;
+    }
+    iframe{
+        display: block;
+        max-width: 80%;
+        margin: auto;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    /* Historia */
+
+    .historia{
+        background-color: #706c6c;
+        width: 80%;
+        margin: auto;
+        margin-bottom: 2rem;
+        line-height: 1.5rem;
+    }
+    .menuHistoria ul, a{
+        list-style: none;
+        text-decoration: none;
+        text-align: center;
+    }
+    .menuHistoria ul li{
+        height: 3rem;
+        font-weight: bold;
+        padding: 1rem;
+    }
+    .menuHistoria ul li:hover{
+        background-color: #ffffff;
+    }
+    .menuHistoria ul li:hover a{
+        color: #3b3434;
+    }
+    .obra div{
+        padding: 1rem;
+    }
+
+    /* Galería */
+
+    .galeria{
+        background-color: #3b3434;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        gap: 10px;
+    }
+    .galeria img{
+        transition: 1s;
+        width: 100%;
+    }
+    .galeria .img:hover{
+        filter: grayscale(75%);
+        transition: 1s;
+    }
+
+    .item1{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    .item2{
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    .item3{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    .item4{
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    .item5{
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+    .item6{
+        grid-column: 2/3;
+        grid-row: 3/4;
+    }
+    .item7{
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+    .item8{
+        grid-column: 2/3;
+        grid-row: 4/5;
+    }
+    .item9{
+        grid-column: 1/2;
+        grid-row: 5/6;
+    }
+    .item10{
+        grid-column: 2/3;
+        grid-row: 5/6;
+    }
+    .item11{
+        grid-column: 1/2;
+        grid-row: 6/7;
+    }
+    .item12{
+        grid-column: 2/3;
+        grid-row: 6/7;
+    }
+
+    /* Contacto */
+
+    .formulario{
+        max-width: 80%;
+        margin: auto;
+        padding: 1rem;
+        font-size: 1rem;
+        background-color: #706c6c;
+        color: #ffffff;
+    }
+    form{
+        display: flex;
+        flex-flow: column;
+        align-content: center;
+        justify-content: center;
+    }
+    .radio, .botones{
+        display: inline;
+    }
+    select, .enviar{
+        color: #3b3434;
+        padding: 0.5rem;
+    }
+
+    footer{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        height: 3rem;
+        width: 100%;
+        background-color: #706c6c;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .redes i:hover{
+        color: #3b3434;
+    }
+
+
+@media screen and (min-width: 768px){
+    .bienvenidos{
+        padding: 2rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 8fr;
+        grid-template-areas: 
+        "titulo titulo"
+        "texto img";
+        align-items: center;
+    }
+    .bienvenidos h2{
+        grid-area: titulo;
+    }
+    .bienvenidos p{
+        grid-area: texto;
+    }
+    .bienvenidos img{
+        grid-area: img;
+    }
+
+    .directoras{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+    .tarjeta{
+        margin: 2rem;
+    }
+    .tarjeta p{
+        display: block;
+    }
+    .mapa{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 8fr;
+        grid-template-areas: 
+        "mapa titulo"
+        "mapa texto";
+    }
+    .mapa iframe{
+        grid-area: mapa;
+    }
+    .mapa h3{
+        grid-area: titulo;
+        align-self: center;
+    }
+    .mapa p{
+        grid-area: texto;
+    }
+
+    .galeria{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    .item1{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    .item2{
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    .item3{
+        grid-column: 3/4;
+        grid-row: 1/2;
+    }
+    .item4{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    .item5{
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    .item6{
+        grid-column: 3/4;
+        grid-row: 2/3;
+    }
+    .item7{
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+    .item8{
+        grid-column: 2/3;
+        grid-row: 3/4;
+    }
+    .item9{
+        grid-column: 3/4;
+        grid-row: 3/4;
+    }
+    .item10{
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+    .item11{
+        grid-column: 2/3;
+        grid-row: 4/5;
+    }
+    .item12{
+        grid-column: 3/4;
+        grid-row: 4/5;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .menuMobile, .logoMobile{
+        display: none;
+    }
+    .menuDesktop{
+        position: absolute;
+        top: -0.5rem;
+        left: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-family: 'Gulzar', serif;
+    }
+    .logo{
+        display: flex;
+        align-items: center;
+    }
+    .logo img{
+        height: 2rem;
+    }
+    .menuDesktop:hover nav{
+        opacity: 1;
+    }
+    
+    .transparente{
+        position: absolute;
+        width: 363px;
+        height: 2rem;
+        background-color: #706c6c;
+    }
+    .menuDesktop:hover .transparente{
+        animation: shrink 1s;
+        animation-fill-mode: forwards;
+    }
+    @keyframes shrink {
+        from{
+            margin-left: 0px;
+            width: 363px;
+        }
+        to{
+            margin-left: 363px;
+            width: 0px;
+        }
+    }
+    
+    .menuDesktop nav{
+        opacity: 0;
+    }
+    .menuDesktop nav ul{
+        display: flex;
+        align-items: flex-start;
+        justify-items: center;
+        list-style: none;
+    }
+    .menuDesktop nav ul li{
+        font-size: 1rem;
+        font-weight: bold;
+        padding-top: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .galeria{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        padding: 2rem;
+    }
+    .item1{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    .item2{
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    .item3{
+        grid-column: 3/4;
+        grid-row: 1/2;
+    }
+    .item4{
+        grid-column: 4/5;
+        grid-row: 1/2;
+    }
+    .item5{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    .item6{
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    .item7{
+        grid-column: 3/4;
+        grid-row: 2/3;
+    }
+    .item8{
+        grid-column: 4/5;
+        grid-row: 2/3;
+    }
+    .item9{
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+    .item10{
+        grid-column: 2/3;
+        grid-row: 3/4;
+    }
+    .item11{
+        grid-column: 3/4;
+        grid-row: 3/4;
+    }
+    .item12{
+        grid-column: 4/5;
+        grid-row: 3/4;
+    }
+}
