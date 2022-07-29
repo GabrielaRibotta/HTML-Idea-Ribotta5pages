@@ -134,6 +134,10 @@
         font-size: 1rem;
     }
 
+    section p{
+        text-align: center;
+        padding: 0.5rem;
+    }
     article p{
         text-align: justify;
         line-height: 1.5rem;
@@ -188,10 +192,11 @@
         margin-bottom: 2rem;
         line-height: 1.5rem;
     }
-    .menuHistoria ul, a{
+    .menuHistoria ul, .menuHistoria a{
         list-style: none;
         text-decoration: none;
         text-align: center;
+        display: none;
     }
     .menuHistoria ul li{
         height: 3rem;
@@ -206,6 +211,20 @@
     }
     .obra div{
         padding: 1rem;
+        height: 3rem;
+        transition: all 2s;
+        overflow: hidden;
+    }
+    .obra div p{
+        margin-top: 1rem;
+    }
+    .obra div:hover{
+        background-color: #ffffff;
+        overflow: visible;
+        height: fit-content;
+    }
+    .obra div:hover p, .obra div:hover h3{
+        color: #3b3434;
     }
 
     /* Galería */
@@ -294,9 +313,13 @@
     .radio, .botones{
         display: inline;
     }
-    select, .enviar{
+    select, option, .enviar{
         color: #3b3434;
         padding: 0.5rem;
+    }
+    option:checked{
+        background-color: #3b3434;
+        color: #ffffff;
     }
 
     footer{
@@ -353,9 +376,10 @@
     .mapa{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 8fr;
+        grid-template-rows: 1fr 1fr 7fr;
         grid-template-areas: 
         "mapa titulo"
+        "mapa img"
         "mapa texto";
     }
     .mapa iframe{
@@ -364,6 +388,10 @@
     .mapa h3{
         grid-area: titulo;
         align-self: center;
+    }
+    .mapa img{
+        grid-area: img;
+        height: 80%;
     }
     .mapa p{
         grid-area: texto;
@@ -450,7 +478,7 @@
     
     .transparente{
         position: absolute;
-        width: 363px;
+        width: 370px;
         height: 2rem;
         background-color: #706c6c;
     }
@@ -461,10 +489,10 @@
     @keyframes shrink {
         from{
             margin-left: 0px;
-            width: 363px;
+            width: 370px;
         }
         to{
-            margin-left: 363px;
+            margin-left: 370px;
             width: 0px;
         }
     }
@@ -473,14 +501,14 @@
         opacity: 0;
     }
     .menuDesktop nav ul{
+        font-size: 1rem;
+        font-weight: bold;
         display: flex;
         align-items: flex-start;
         justify-items: center;
         list-style: none;
     }
     .menuDesktop nav ul li{
-        font-size: 1rem;
-        font-weight: bold;
         padding-top: 5px;
         padding-left: 10px;
         padding-right: 10px;
@@ -538,5 +566,9 @@
     .item12{
         grid-column: 4/5;
         grid-row: 3/4;
+    }
+
+    .formulario{
+        padding: 3rem;
     }
 }
