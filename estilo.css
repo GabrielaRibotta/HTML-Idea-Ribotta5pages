@@ -134,10 +134,6 @@
         font-size: 1rem;
     }
 
-    section p{
-        text-align: center;
-        padding: 0.5rem;
-    }
     article p{
         text-align: justify;
         line-height: 1.5rem;
@@ -226,6 +222,9 @@
     .obra div:hover p, .obra div:hover h3{
         color: #3b3434;
     }
+    .obra a{
+        cursor: pointer;
+    }
 
     /* Galería */
 
@@ -310,16 +309,37 @@
         align-content: center;
         justify-content: center;
     }
-    .radio, .botones{
-        display: inline;
+    textarea, input[type=text], input[type=email]{
+        resize: none;
+        color: #3b3434;
+        border: none;
     }
-    select, option, .enviar{
+    .radio, .botones{
+        display: inline-block;
+        line-height: 1.5rem;
+        margin-top: 0.5rem;
+    }
+    select, option{
         color: #3b3434;
         padding: 0.5rem;
+        border: none;
     }
     option:checked{
         background-color: #3b3434;
         color: #ffffff;
+    }
+    input[type=button], input[type=submit], input[type=reset]{
+        text-transform: uppercase;
+        border: none;
+        padding: 1rem;
+        background-color: #3b3434;
+        color: #ffffff;
+        cursor: pointer;
+    }
+    input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover{
+        background-color: #ffffff;
+        color: #3b3434;
+        transition: 0.7s;
     }
 
     footer{
@@ -464,6 +484,9 @@
         align-items: center;
         justify-content: space-between;
         font-family: 'Gulzar', serif;
+    }
+    .menuDesktop span{
+        margin-top: 0.3rem;
     }
     .logo{
         display: flex;
