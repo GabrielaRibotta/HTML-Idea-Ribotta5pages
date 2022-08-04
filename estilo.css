@@ -17,6 +17,7 @@
         width: 100%;
         background-color: #706c6c;
         color: #ffffff;
+        z-index: 1;
     }
     nav{
         display: flex;
@@ -73,6 +74,10 @@
     }
     nav a{
         text-decoration: none;
+        color:#ffffff
+    }
+    nav a:hover{
+        color: #3b3434;
     }
     .menu li:hover a{
         color: #3b3434;
@@ -103,6 +108,7 @@
     .banner{
         background-image: url(./multimedia/telon.jpg);
         background-size: cover;
+        background-position: center;
         height: 5rem;
         width: 100%;
         display: grid;
@@ -132,6 +138,15 @@
     }
     h3{
         font-size: 1rem;
+    }
+    .carousel {
+        position: relative;
+        height: 50rem;
+        overflow: hidden;
+    }
+    .carousel-inner .carousel-item img{
+        max-width: 100%;
+        margin-top: -15rem;
     }
 
     article p{
@@ -302,6 +317,7 @@
         font-size: 1rem;
         background-color: #706c6c;
         color: #ffffff;
+        border-radius: 0.25rem;
     }
     form{
         display: flex;
@@ -309,37 +325,51 @@
         align-content: center;
         justify-content: center;
     }
+    .form-label, .form-check-input{
+        margin-top: 0.5rem;
+    }
     textarea, input[type=text], input[type=email]{
         resize: none;
         color: #3b3434;
         border: none;
+        transition: 1s;
     }
-    .radio, .botones{
-        display: inline-block;
-        line-height: 1.5rem;
-        margin-top: 0.5rem;
+    textarea:active, input[type=text]:active, input[type=email]:active{
+        border: 2px solid #3b3434;
+        transition: 1s;
     }
-    select, option{
-        color: #3b3434;
-        padding: 0.5rem;
-        border: none;
+    input[type=radio]{
+        margin-top: -0.1rem;
     }
-    option:checked{
+    input[type=radio]::before{
+        border: #3b3434;
+        background: #ffffff;
+    }
+    input[type=radio]:checked{
+        border: #ffffff;
+        background: #3b3434;
+    }
+    input[type=radio]::after{
+        border: #ffffff;
+        background: #3b3434;
+    }
+    .form-check-input {
+        background-color: #ffffff;
+        border-color: #3b3434;
+    }
+    .form-check-input:checked {
         background-color: #3b3434;
-        color: #ffffff;
+        border-color: #ffffff;
     }
-    input[type=button], input[type=submit], input[type=reset]{
+    button{
+        text-align: center;
         text-transform: uppercase;
-        border: none;
-        padding: 1rem;
         background-color: #3b3434;
         color: #ffffff;
         cursor: pointer;
     }
-    input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover{
-        background-color: #ffffff;
-        color: #3b3434;
-        transition: 0.7s;
+    .row{
+        --bs-gutter-x: 0;
     }
 
     footer{
