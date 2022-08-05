@@ -17,7 +17,7 @@
         width: 100%;
         background-color: #706c6c;
         color: #ffffff;
-        z-index: 1;
+        z-index: 3;
     }
     nav{
         display: flex;
@@ -59,7 +59,7 @@
         margin-top: 0;
         width: 10rem;
         opacity: 90%;
-        z-index: 1;
+        z-index: 2;
         text-align: center;
     }
     .menu li{
@@ -105,6 +105,29 @@
         margin-left: auto;
         margin-right: auto;
     }
+    .tituloPrincipal{
+        z-index: 1;
+        position: absolute;
+        margin-top: 5rem;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr;
+        grid-template-areas: 
+        "subtitulo"
+        "titulo"
+        "titulo";
+        align-items: center;
+    }
+    .tituloPrincipal h2{
+        grid-area: subtitulo;
+        font-weight: bold;
+    }
+    .tituloPrincipal h1{
+        grid-area: titulo;
+        letter-spacing: 2px;
+        font-weight: bold;
+    }
     .banner{
         background-image: url(./multimedia/telon.jpg);
         background-size: cover;
@@ -119,13 +142,18 @@
         "titulo"
         "titulo";
         align-items: center;
+        padding: 0.7rem;
     }
     .banner h2{
         grid-area: subtitulo;
+        font-weight: bold;
+        margin-top: 0;
     }
     .banner h1{
         grid-area: titulo;
         letter-spacing: 2px;
+        font-weight: bold;
+        margin-top: 0.7rem;
     }
     h1, h2, h3{
         text-align: center;
@@ -135,18 +163,10 @@
     }
     h2{
         font-size: 1rem;
+        margin-top: 0.7rem;
     }
     h3{
         font-size: 1rem;
-    }
-    .carousel {
-        position: relative;
-        height: 50rem;
-        overflow: hidden;
-    }
-    .carousel-inner .carousel-item img{
-        max-width: 100%;
-        margin-top: -15rem;
     }
 
     article p{
@@ -392,6 +412,19 @@
 
 
 @media screen and (min-width: 768px){
+    .tituloPrincipal{
+        margin-top: 13rem;
+    }
+    .tituloPrincipal h1{
+        font-size: 5rem;
+    }
+    .tituloPrincipal h2{
+        font-size: 2rem;
+    }
+    .carousel-item{
+        max-height: 40rem;
+    }
+
     .bienvenidos{
         padding: 2rem;
         display: grid;
@@ -565,6 +598,15 @@
         padding-top: 5px;
         padding-left: 10px;
         padding-right: 10px;
+    }
+    h1{
+        font-size: 2.4rem;
+    }
+    h2{
+        font-size: 1.2rem;
+    }
+    .bienvenidos h2{
+        font-size: 2rem;
     }
 
     .galeria{
