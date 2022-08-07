@@ -135,6 +135,7 @@
     }
     .tituloPrincipal h1{
         grid-area: titulo;
+        align-self: flex-start;
         letter-spacing: 2px;
         font-weight: bold;
         text-shadow: 2px 2px 10px #3b3434;
@@ -419,10 +420,27 @@
         color: #3b3434;
     }
 
+    @media screen and (min-width: 425px){
+        .tituloPrincipal{
+            margin-top: 8rem;
+        }
+    }
+
+    @media screen and (min-width: 481px){
+        .tituloPrincipal{
+            margin-top: 9rem;
+        }
+        .tituloPrincipal h1{
+            font-size: 3rem;
+        }
+        .tituloPrincipal h2{
+            font-size: 1.3rem;
+        }
+    }
 
 @media screen and (min-width: 768px){
     .tituloPrincipal{
-        margin-top: 13rem;
+        margin-top: rem;
     }
     .tituloPrincipal h1{
         font-size: 5rem;
@@ -431,10 +449,7 @@
         font-size: 2rem;
     }
     .carousel-item{
-        max-height: 40rem;
-    }
-    .carousel-item img{
-        margin-top: -12rem;
+        max-height: 25rem;
     }
 
     .bienvenidos{
@@ -547,7 +562,10 @@
     }
 }
 
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 992px){
+    .tituloPrincipal{
+        margin-top: 13rem;
+    }
     .navbar-collapse{
         background-color: #706c6c;
         font-size: 1.2rem;
@@ -575,6 +593,13 @@
     }
     .bienvenidos h2{
         font-size: 2rem;
+    }
+
+    .carousel-item{
+        max-height: 30rem;
+    }
+    .carousel-item img{
+        margin-top: -5rem;
     }
 
     .galeria{
@@ -633,5 +658,11 @@
 
     .formulario{
         padding: 3rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .carousel-item img{
+        margin-top: -10rem;
     }
 }
